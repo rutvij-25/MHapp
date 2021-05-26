@@ -1,0 +1,472 @@
+{% extends "MHanalyser/index.html" %}
+{% block content %}
+
+
+
+<form method="POST" action="" >
+ {% csrf_token %}
+ <h4>Gender</h4>
+  <input type="radio" id="m" name="ans1" value=0>
+  <label for="f">Male</label><br>
+  <input type="radio" id="f" name="ans1" value=1>
+  <label for="f">Female</label><br>
+
+<h4>Age</h4>
+  <input type="radio" id="m" name="ans2" value=1>
+  <label for="f">Upto 25</label><br>
+  <input type="radio" id="f" name="ans2" value=2>
+  <label for="f">26 to 50</label><br>
+  <input type="radio" id="a" name="ans2" value=3>
+  <label for="a">51 and above</label><br>
+
+<h4>Marital Status</h4>
+  <input type="radio" id="m" name="ans3" value=0>
+  <label for="f">Single</label><br>
+  <input type="radio" id="f" name="ans3" value=1>
+  <label for="f">Married/widow/divorce</label><br>
+
+<h4>Area of Residence</h4>
+  <input type="radio" id="m" name="ans4" value=0>
+  <label for="f">Rural</label><br>
+  <input type="radio" id="f" name="ans4" value=1>
+  <label for="f">Urban</label><br>
+
+<h4>Employment Status</h4>
+  <input type="radio" id="m" name="ans5" value=0>
+  <label for="f">Employed</label><br>
+  <input type="radio" id="f" name="ans5" value=1>
+  <label for="f">Un-employed</label><br>
+
+<h4>Monthly Family Income</h4>
+  <input type="radio" id="m" name="ans6" value=1>
+  <label for="f">Upto 40,000</label><br>
+  <input type="radio" id="f" name="ans6" value=2>
+  <label for="f">41,000 to 80,000</label><br>
+  <input type="radio" id="f" name="ans6" value=3>
+  <label for="f">81,000 to 1,20,000</label><br>
+  <input type="radio" id="f" name="ans6" value=4>
+  <label for="f">1,21,000 to 1,60,000</label><br>
+  <input type="radio" id="f" name="ans6" value=5>
+  <label for="f">More than 1,60,000</label><br>
+
+<h4>Level of Education</h4>
+  <input type="radio" id="m" name="ans7" value=1>
+  <label for="f">PhD</label><br>
+  <input type="radio" id="f" name="ans7" value=2>
+  <label for="f">Masters/MS/M.Phil</label><br>
+  <input type="radio" id="f" name="ans7" value=3>
+  <label for="f">Bachelor</label><br>
+  <input type="radio" id="f" name="ans7" value=4>
+  <label for="f">12 years or less than 12 years</label><br>
+
+<h4>Do you know any of your friend or family member who is infected with COVID-19?</h4>
+  <input type="radio" id="m" name="ans8" value=0>
+  <label for="f">Yes, I know</label><br>
+  <input type="radio" id="f" name="ans8" value=1>
+  <label for="f">No, I don’t know</label><br>
+
+<h4>I am most afraid of COVID-19</h4>
+  <input type="radio" id="sd" name="ans9" value=1>
+  <label for="sd">Strongly Disagree</label><br>
+  <input type="radio" id="d" name="ans9" value=2>
+  <label for="d">Disagree</label><br>
+   <input type="radio" id="n" name="ans9" value=3>
+  <label for="d">Neutral</label><br>
+  <input type="radio" id="a" name="ans9" value=4>
+  <label for="d">Agree</label><br>
+  <input type="radio" id="sa" name="ans9" value=5>
+  <label for="d">Strongly Agree</label>
+  <br>
+
+<h4>It makes me uncomfortable to think about Corona</h4>
+  <input type="radio" id="sd" name="ans10" value=1>
+  <label for="sd">Strongly Disagree</label><br>
+  <input type="radio" id="d" name="ans10" value=2>
+  <label for="d">Disagree</label><br>
+   <input type="radio" id="n" name="ans10" value=3>
+  <label for="d">Neutral</label><br>
+  <input type="radio" id="a" name="ans10" value=4>
+  <label for="d">Agree</label><br>
+  <input type="radio" id="sa" name="ans10" value=5>
+  <label for="d">Strongly Agree</label>
+  <br>
+
+<h4>My hands become clammy when I think about Corona</h4>
+  <input type="radio" id="sd" name="ans11" value=1>
+  <label for="sd">Strongly Disagree</label><br>
+  <input type="radio" id="d" name="ans11" value=2>
+  <label for="d">Disagree</label><br>
+   <input type="radio" id="n" name="ans11" value=3>
+  <label for="d">Neutral</label><br>
+  <input type="radio" id="a" name="ans11" value=4>
+  <label for="d">Agree</label><br>
+  <input type="radio" id="sa" name="ans11" value=5>
+  <label for="d">Strongly Agree</label>
+  <br>
+
+<h4>I am afraid of losing my life because of Corona</h4>
+  <input type="radio" id="sd" name="ans12" value=1>
+  <label for="sd">Strongly Disagree</label><br>
+  <input type="radio" id="d" name="ans12" value=2>
+  <label for="d">Disagree</label><br>
+   <input type="radio" id="n" name="ans12" value=3>
+  <label for="d">Neutral</label><br>
+  <input type="radio" id="a" name="ans12" value=4>
+  <label for="d">Agree</label><br>
+  <input type="radio" id="sa" name="ans12" value=5>
+  <label for="d">Strongly Agree</label>
+  <br>
+
+<h4>When I watch news and stories about Corona on social media, I become nervous or
+anxious</h4>
+  <input type="radio" id="sd" name="ans13" value=1>
+  <label for="sd">Strongly Disagree</label><br>
+  <input type="radio" id="d" name="ans13" value=2>
+  <label for="d">Disagree</label><br>
+   <input type="radio" id="n" name="ans13" value=3>
+  <label for="d">Neutral</label><br>
+  <input type="radio" id="a" name="ans13" value=4>
+  <label for="d">Agree</label><br>
+  <input type="radio" id="sa" name="ans13" value=5>
+  <label for="d">Strongly Agree</label>
+  <br>
+
+<h4>I cannot sleep because I'm worrying about getting Corona</h4>
+  <input type="radio" id="sd" name="ans14" value=1>
+  <label for="sd">Strongly Disagree</label><br>
+  <input type="radio" id="d" name="ans14" value=2>
+  <label for="d">Disagree</label><br>
+   <input type="radio" id="n" name="ans14" value=3>
+  <label for="d">Neutral</label><br>
+  <input type="radio" id="a" name="ans14" value=4>
+  <label for="d">Agree</label><br>
+  <input type="radio" id="sa" name="ans14" value=5>
+  <label for="d">Strongly Agree</label>
+  <br>
+
+<h4>My heart races or palpitates when I think about getting Corona</h4>
+  <input type="radio" id="sd" name="ans15" value=1>
+  <label for="sd">Strongly Disagree</label><br>
+  <input type="radio" id="d" name="ans15" value=2>
+  <label for="d">Disagree</label><br>
+   <input type="radio" id="n" name="ans15" value=3>
+  <label for="d">Neutral</label><br>
+  <input type="radio" id="a" name="ans15" value=4>
+  <label for="d">Agree</label><br>
+  <input type="radio" id="sa" name="ans15" value=5>
+  <label for="d">Strongly Agree</label>
+  <br>
+
+<h4>I regularly wash my hands for 20 seconds</h4>
+  <input type="radio" id="sd" name="ans16" value=1>
+  <label for="sd">Never</label><br>
+  <input type="radio" id="d" name="ans16" value=2>
+  <label for="d">Rarely</label><br>
+   <input type="radio" id="n" name="ans16" value=3>
+  <label for="d">Sometimes</label><br>
+  <input type="radio" id="a" name="ans16" value=4>
+  <label for="d">Often</label><br>
+  <input type="radio" id="sa" name="ans16" value=5>
+  <label for="d">Always</label>
+  <br>
+
+<h4>I wear mask when go outside</h4>
+  <input type="radio" id="sd" name="ans17" value=1>
+  <label for="sd">Never</label><br>
+  <input type="radio" id="d" name="ans17" value=2>
+  <label for="d">Rarely</label><br>
+   <input type="radio" id="n" name="ans17" value=3>
+  <label for="d">Sometimes</label><br>
+  <input type="radio" id="a" name="ans17" value=4>
+  <label for="d">Often</label><br>
+  <input type="radio" id="sa" name="ans17" value=5>
+  <label for="d">Always</label>
+  <br>
+
+<h4>I avoid handshake and physical gestures of greetings</h4>
+  <input type="radio" id="sd" name="ans18" value=1>
+  <label for="sd">Never</label><br>
+  <input type="radio" id="d" name="ans18" value=2>
+  <label for="d">Rarely</label><br>
+   <input type="radio" id="n" name="ans18" value=3>
+  <label for="d">Sometimes</label><br>
+  <input type="radio" id="a" name="ans18" value=4>
+  <label for="d">Often</label><br>
+  <input type="radio" id="sa" name="ans18" value=5>
+  <label for="d">Always</label>
+  <br>
+
+<h4>I maintain social/physical distance while meeting others</h4>
+  <input type="radio" id="sd" name="ans19" value=1>
+  <label for="sd">Never</label><br>
+  <input type="radio" id="d" name="ans19" value=2>
+  <label for="d">Rarely</label><br>
+   <input type="radio" id="n" name="ans19" value=3>
+  <label for="d">Sometimes</label><br>
+  <input type="radio" id="a" name="ans19" value=4>
+  <label for="d">Often</label><br>
+  <input type="radio" id="sa" name="ans19" value=5>
+  <label for="d">Always</label>
+  <br>
+
+<h4>I do not meet (or avoid) people who have cough or flue</h4>
+  <input type="radio" id="sd" name="ans20" value=1>
+  <label for="sd">Never</label><br>
+  <input type="radio" id="d" name="ans20" value=2>
+  <label for="d">Rarely</label><br>
+   <input type="radio" id="n" name="ans20" value=3>
+  <label for="d">Sometimes</label><br>
+  <input type="radio" id="a" name="ans20" value=4>
+  <label for="d">Often</label><br>
+  <input type="radio" id="sa" name="ans20" value=5>
+  <label for="d">Always</label>
+  <br>
+
+<h4>I do not touch my face (mouth, nose, eyes) without washing my hands</h4>
+  <input type="radio" id="sd" name="ans21" value=1>
+  <label for="sd">Never</label><br>
+  <input type="radio" id="d" name="ans21" value=2>
+  <label for="d">Rarely</label><br>
+   <input type="radio" id="n" name="ans21" value=3>
+  <label for="d">Sometimes</label><br>
+  <input type="radio" id="a" name="ans21" value=4>
+  <label for="d">Often</label><br>
+  <input type="radio" id="sa" name="ans21" value=5>
+  <label for="d">Always</label>
+  <br>
+
+<h4>When water is not available, I use sanitizer to clean my hands</h4>
+  <input type="radio" id="sd" name="ans22" value=1>
+  <label for="sd">Never</label><br>
+  <input type="radio" id="d" name="ans22" value=2>
+  <label for="d">Rarely</label><br>
+   <input type="radio" id="n" name="ans22" value=3>
+  <label for="d">Sometimes</label><br>
+  <input type="radio" id="a" name="ans22" value=4>
+  <label for="d">Often</label><br>
+  <input type="radio" id="sa" name="ans22" value=5>
+  <label for="d">Always</label>
+  <br>
+
+<h4>I am often a carefree and good spirit</h4>
+  <input type="radio" id="sd" name="ans23" value=1>
+  <label for="sd">Strongly Disagree</label><br>
+  <input type="radio" id="d" name="ans23" value=2>
+  <label for="d">Disagree</label><br>
+   <input type="radio" id="n" name="ans23" value=3>
+  <label for="d">Neutral</label><br>
+  <input type="radio" id="a" name="ans23" value=4>
+  <label for="d">Agree</label><br>
+  <input type="radio" id="sa" name="ans23" value=5>
+  <label for="d">Strongly agree</label>
+  <br>
+
+<h4>I enjoy my life</h4>
+  <input type="radio" id="sd" name="ans24" value=1>
+  <label for="sd">Strongly Disagree</label><br>
+  <input type="radio" id="d" name="ans24" value=2>
+  <label for="d">Disagree</label><br>
+   <input type="radio" id="n" name="ans24" value=3>
+  <label for="d">Neutral</label><br>
+  <input type="radio" id="a" name="ans24" value=4>
+  <label for="d">Agree</label><br>
+  <input type="radio" id="sa" name="ans24" value=5>
+  <label for="d">Strongly agree</label>
+  <br>
+
+<h4>All in all, I am satisfied with my life</h4>
+  <input type="radio" id="sd" name="ans25" value=1>
+  <label for="sd">Strongly Disagree</label><br>
+  <input type="radio" id="d" name="ans25" value=2>
+  <label for="d">Disagree</label><br>
+   <input type="radio" id="n" name="ans25" value=3>
+  <label for="d">Neutral</label><br>
+  <input type="radio" id="a" name="ans25" value=4>
+  <label for="d">Agree</label><br>
+  <input type="radio" id="sa" name="ans25" value=5>
+  <label for="d">Strongly agree</label>
+  <br>
+
+<h4>In general, I am confident</h4>
+  <input type="radio" id="sd" name="ans26" value=1>
+  <label for="sd">Strongly Disagree</label><br>
+  <input type="radio" id="d" name="ans26" value=2>
+  <label for="d">Disagree</label><br>
+   <input type="radio" id="n" name="ans26" value=3>
+  <label for="d">Neutral</label><br>
+  <input type="radio" id="a" name="ans26" value=4>
+  <label for="d">Agree</label><br>
+  <input type="radio" id="sa" name="ans26" value=5>
+  <label for="d">Strongly agree</label>
+  <br>
+
+<h4>I manage well to fulfil my needs</h4>
+  <input type="radio" id="sd" name="ans27" value=1>
+  <label for="sd">Strongly Disagree</label><br>
+  <input type="radio" id="d" name="ans27" value=2>
+  <label for="d">Disagree</label><br>
+   <input type="radio" id="n" name="ans27" value=3>
+  <label for="d">Neutral</label><br>
+  <input type="radio" id="a" name="ans27" value=4>
+  <label for="d">Agree</label><br>
+  <input type="radio" id="sa" name="ans27" value=5>
+  <label for="d">Strongly agree</label>
+  <br>
+
+<h4>I am in good physical and emotional condition</h4>
+  <input type="radio" id="sd" name="ans28" value=1>
+  <label for="sd">Strongly Disagree</label><br>
+  <input type="radio" id="d" name="ans28" value=2>
+  <label for="d">Disagree</label><br>
+   <input type="radio" id="n" name="ans28" value=3>
+  <label for="d">Neutral</label><br>
+  <input type="radio" id="a" name="ans28" value=4>
+  <label for="d">Agree</label><br>
+  <input type="radio" id="sa" name="ans28" value=5>
+  <label for="d">Strongly agree</label>
+  <br>
+
+<h4>I feel that I am actually well equipped to deal with life and its activities</h4>
+  <input type="radio" id="sd" name="ans29" value=1>
+  <label for="sd">Strongly Disagree</label><br>
+  <input type="radio" id="d" name="ans29" value=2>
+  <label for="d">Disagree</label><br>
+   <input type="radio" id="n" name="ans29" value=3>
+  <label for="d">Neutral</label><br>
+  <input type="radio" id="a" name="ans29" value=4>
+  <label for="d">Agree</label><br>
+  <input type="radio" id="sa" name="ans29" value=5>
+  <label for="d">Strongly agree</label>
+  <br>
+
+<h4>Much of what I do brings me joy</h4>
+  <input type="radio" id="sd" name="ans30" value=1>
+  <label for="sd">Strongly Disagree</label><br>
+  <input type="radio" id="d" name="ans30" value=2>
+  <label for="d">Disagree</label><br>
+   <input type="radio" id="n" name="ans30" value=3>
+  <label for="d">Neutral</label><br>
+  <input type="radio" id="a" name="ans30" value=4>
+  <label for="d">Agree</label><br>
+  <input type="radio" id="sa" name="ans30" value=5>
+  <label for="d">Strongly agree</label>
+  <br>
+
+<h4>I am a calm, balanced human being</h4>
+  <input type="radio" id="sd" name="ans31" value=1>
+  <label for="sd">Strongly Disagree</label><br>
+  <input type="radio" id="d" name="ans31" value=2>
+  <label for="d">Disagree</label><br>
+   <input type="radio" id="n" name="ans31" value=3>
+  <label for="d">Neutral</label><br>
+  <input type="radio" id="a" name="ans31" value=4>
+  <label for="d">Agree</label><br>
+  <input type="radio" id="sa" name="ans31" value=5>
+  <label for="d">Strongly agree</label>
+  <br>
+
+<h4>Are you satisfied with the steps taken by the government authorities to control the
+spread of Coronavirus?</h4>
+  <input type="radio" id="sd" name="ans32" value=1>
+  <label for="sd">Very dissatisfied</label><br>
+  <input type="radio" id="d" name="ans32" value=2>
+  <label for="d">Dissatisfied</label><br>
+   <input type="radio" id="n" name="ans32" value=3>
+  <label for="d">Neutral</label><br>
+  <input type="radio" id="a" name="ans32" value=4>
+  <label for="d">Satisfied</label><br>
+  <input type="radio" id="sa" name="ans32" value=5>
+  <label for="d">Very satisfied</label>
+  <br>
+
+<h4>Are you satisfied with your family's safety from COVID-19?</h4>
+  <input type="radio" id="sd" name="ans33" value=1>
+  <label for="sd">Very dissatisfied</label><br>
+  <input type="radio" id="d" name="ans33" value=2>
+  <label for="d">Dissatisfied</label><br>
+   <input type="radio" id="n" name="ans33" value=3>
+  <label for="d">Neutral</label><br>
+  <input type="radio" id="a" name="ans33" value=4>
+  <label for="d">Satisfied</label><br>
+  <input type="radio" id="sa" name="ans33" value=5>
+  <label for="d">Very satisfied</label>
+  <br>
+
+<h4>Are you satisfied with your studies during the prevailing situation of COVID-19?</h4>
+  <input type="radio" id="sd" name="ans34" value=1>
+  <label for="sd">Very dissatisfied</label><br>
+  <input type="radio" id="d" name="ans34" value=2>
+  <label for="d">Dissatisfied</label><br>
+   <input type="radio" id="n" name="ans34" value=3>
+  <label for="d">Neutral</label><br>
+  <input type="radio" id="a" name="ans34" value=4>
+  <label for="d">Satisfied</label><br>
+  <input type="radio" id="sa" name="ans34" value=5>
+  <label for="d">Very satisfied</label>
+  <br>
+
+<h4>Over the last two weeks, not being able to stop or control worrying</h4>
+  <input type="radio" id="sd" name="ans35" value=1>
+  <label for="sd">Not at all</label><br>
+  <input type="radio" id="d" name="ans35" value=2>
+  <label for="d">Several days</label><br>
+   <input type="radio" id="n" name="ans35" value=3>
+  <label for="d">More than half the days</label><br>
+  <input type="radio" id="a" name="ans35" value=4>
+  <label for="d">Nearly everyday</label><br>
+  
+
+<h4>Over the last two weeks, worrying too much about different things</h4>
+   <input type="radio" id="sd" name="ans36" value=1>
+  <label for="sd">Not at all</label><br>
+  <input type="radio" id="d" name="ans36" value=2>
+  <label for="d">Several days</label><br>
+   <input type="radio" id="n" name="ans36" value=3>
+  <label for="d">More than half the days</label><br>
+  <input type="radio" id="a" name="ans36" value=4>
+  <label for="d">Nearly everyday</label><br>
+  
+
+<h4>Over the last two weeks, trouble relaxing</h4>
+  <input type="radio" id="sd" name="ans37" value=1>
+  <label for="sd">Not at all</label><br>
+  <input type="radio" id="d" name="ans37" value=2>
+  <label for="d">Several days</label><br>
+   <input type="radio" id="n" name="ans37" value=3>
+  <label for="d">More than half the days</label><br>
+  <input type="radio" id="a" name="ans37" value=4>
+  <label for="d">Nearly everyday</label><br>
+  
+<h4>Over the last two weeks, being so restless that it is hard to sit still</h4>
+  <input type="radio" id="sd" name="ans38" value=1>
+  <label for="sd">Not at all</label><br>
+  <input type="radio" id="d" name="ans38" value=2>
+  <label for="d">Several days</label><br>
+   <input type="radio" id="n" name="ans38" value=3>
+  <label for="d">More than half the days</label><br>
+  <input type="radio" id="a" name="ans38" value=4>
+  <label for="d">Nearly everyday</label><br>
+
+<h4>Over the last two weeks, becoming easily annoyed or irritable</h4>
+  <input type="radio" id="sd" name="ans39" value=1>
+  <label for="sd">Not at all</label><br>
+  <input type="radio" id="d" name="ans39" value=2>
+  <label for="d">Several days</label><br>
+   <input type="radio" id="n" name="ans39" value=3>
+  <label for="d">More than half the days</label><br>
+  <input type="radio" id="a" name="ans39" value=4>
+  <label for="d">Nearly everyday</label><br>
+
+<h4>Over the last two weeks, feeling afraid, as if something awful might happen</h4>
+  <input type="radio" id="sd" name="ans40" value=1>
+  <label for="sd">Not at all</label><br>
+  <input type="radio" id="d" name="ans40" value=2>
+  <label for="d">Several days</label><br>
+   <input type="radio" id="n" name="ans40" value=3>
+  <label for="d">More than half the days</label><br>
+  <input type="radio" id="a" name="ans40" value=4>
+  <label for="d">Nearly everyday</label><br>
+<br>
+<input type="submit" value="Submit">
+</form>
+{% endblock %}
