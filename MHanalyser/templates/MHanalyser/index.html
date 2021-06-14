@@ -23,8 +23,27 @@
           <a class="nav-link active" aria-current="page" href="{% url 'takeatest' %}">Take a test</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'result' %}">Result</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="{% url 'about' %}">About us</a>
         </li>
+        {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a class="nav-link" href="">{{ user }}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+          </li>
+        {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'login' %}">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'register' %}">Register</a>
+          </li>
+        {% endif %}
+        
       </ul>
     </div>
   </div>

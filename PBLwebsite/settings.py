@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -25,8 +25,7 @@ SECRET_KEY = 'django-insecure-e$y)v%&k6a#8f3u-22+4&bvn5na)h40p@7gp#h$(42^9*osn#o
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://rutvij-dj.herokuapp.com','127.0.0.1:8000']
-
+ALLOWED_HOSTS = ['rutvij-dj.herokuapp.com','127.0.0.1']
 
 # Application definition
 
@@ -82,6 +81,17 @@ DATABASES = {
     }
 }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'demo_db',
+#         'USER':'postgres',
+#         'PASSWORD':'rushil17',
+#         'HOST':'localhost',
+#         'PORT':5432
+#     }
+# }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -119,7 +129,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_ROOT = 'C:/Users/Yogita Wamanse/Desktop/PBLwebsite/MHanalyser/templates/MHanalyser'
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 
 STATIC_URL = '/static/'
 

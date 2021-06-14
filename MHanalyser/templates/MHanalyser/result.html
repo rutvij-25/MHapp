@@ -1,4 +1,13 @@
 {% extends "MHanalyser/index.html" %}
+
 {% block content %}
-<h3>Your anxiety level is {{ result }}</h3>
+    <br>
+    {% if result %}
+        <h3>Your anxiety level is {{ result }}</h3>
+    {% else %}
+        <h2>Please take a test</h2>
+        <h3><a href="{% url 'takeatest' %}">Take A Test!</a></h3>
+    {% endif %}
+
+
 {% endblock %}

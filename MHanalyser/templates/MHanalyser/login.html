@@ -1,0 +1,22 @@
+{% extends "MHanalyser/index.html" %}
+{% block content %}
+<h2>Login</h2>
+{% for message in messages %}
+    {{ message }}
+{% endfor %}
+<br>
+    <form method="POST">
+        {% csrf_token %}
+        <p>Username</p>
+        <input type="text" name="username">
+        <br>
+        <p>Password</p>
+        <input type="password" name="password">
+        <br>
+        <br>
+        <input type="submit" name="Login" value="Login">
+    </form>
+    <br>
+    <p>Don't have an account?<a href="{% url 'register' %}">Register</a></p>
+
+{% endblock %}
