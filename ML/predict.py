@@ -6,7 +6,7 @@ import numpy as np
 def predict(ans):
     ans = np.array(ans)
     ans = ans.reshape(1,-1)
-    loaded_model = pickle.load(open("ML\model.pkl", 'rb'))
+    loaded_model = pickle.load(open("ML\\model.pkl", 'rb'))
     result = loaded_model.predict(ans)
     return result
 
